@@ -1,12 +1,19 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./Components/Header/Header";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ShoppingCartContextProvider } from "./Components/Context/ShoppingCartContext";
+import CartPage from "./Components/Pages/CartPage";
+import HomePage from "./Components/Pages/HomePage";
 
 function App() {
   return (
-    <Router>
-      <Header />
-    </Router>
+    <ShoppingCartContextProvider>
+      <Router>
+        <Routes>
+          <Route exact path="/cart" element={<CartPage />} />
+          <Route exact path="/" element={<HomePage />} />
+        </Routes>
+      </Router>
+    </ShoppingCartContextProvider>
   );
 }
 

@@ -4,7 +4,7 @@ const productsList = [
     title: "Christmas Tree",
     description: "Beautiful Christmas tree",
     brand: "Pinewood Oaks",
-    price: 150,
+    price: 15000,
     image:
       "https://images.unsplash.com/photo-1606922619208-e0a4227607f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80",
   },
@@ -13,7 +13,7 @@ const productsList = [
     title: "MacBook Pro",
     description: "MacBook Pro 13inch",
     brand: "Apple",
-    price: 1400,
+    price: 140000,
     image:
       "https://images.unsplash.com/photo-1569770218135-bea267ed7e84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
   },
@@ -24,6 +24,7 @@ export const fetchProducts = () =>
     console.log("Fetching Data");
     setTimeout(() => {
       try {
+        resolve(productsList);
       } catch (e) {
         reject(e);
       }
